@@ -1,8 +1,8 @@
 {
-	"name": "jest-reporter",
-	"version": "1.0.1",
-	"author": "Tomasz Rembacz <trembacz@squiz.pl>",
-	"description": "Jest Reporter with customisable sounds and messages",
+	"name": "jest-text-reporter",
+	"version": "1.0.0",
+	"author": "bradmop",
+	"description": "Jest Text Reporter",
 	"main": "index.js",
 	"scripts": {
 		"test": "jest"
@@ -10,20 +10,16 @@
 	"keywords": [
 		"jest",
 		"reporter",
-		"sounds",
-		"ascii",
-		"text",
-		"test"
+		"text"
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/trembacz/jest-reporter.git"
+		"url": "https://github.com/atsid/jest-text-reporter.git"
 	},
-	"homepage": "https://github.com/trembacz/jest-reporter#readme",
+	"homepage": "https://github.com/atsid/jest-text-reporter#readme",
 	"license": "MIT",
 	"dependencies": {
-		"path": "^0.12.7",
-		"play-sound": "^1.1.1"
+		"path": "^0.12.7"
 	},
 	"devDependencies": {
 		"jest": "^21.2.1"
@@ -34,14 +30,8 @@
 			[
 				"<rootDir>/index.js",
 				{
-					"passSound": "sounds/customPass.wav",
-					"failSound": "sounds/customFail.wav",
-					"passText": "txt/customPass.txt",
-					"failText": "txt/customFail.txt",
-					"skipFailSound": false,
-					"skipFailText": false,
-					"skipPassSound": false,
-					"skipPassText": false
+					"outputdir": "foo",
+					"filename": "bar.txt"
 				}
 			]
 		]

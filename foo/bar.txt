@@ -1,0 +1,7 @@
+Total tests: 2
+Passed tests: 2
+Failed tests: 0
+
+Test Suite - C:\Users\brad.maupin\jest-text-reporter\__tests__\index.test.js
+passed -  Test #1
+passed -  Test #2

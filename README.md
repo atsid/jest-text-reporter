@@ -1,5 +1,5 @@
 # Custom Jest Reporter (jest-reporter)
-Jest Reporter with customisable sounds and messages.
+Jest text output reporter
 
 [![Build Status](https://travis-ci.org/trembacz/jest-reporter.svg?branch=master)](https://travis-ci.org/trembacz/jest-reporter)
 [![Dependencies](https://david-dm.org/trembacz/jest-reporter/status.svg)](https://david-dm.org/trembacz/jest-reporter?view=list) 
@@ -7,11 +7,11 @@ Jest Reporter with customisable sounds and messages.
 
 ## Installing
 
-```npm install --save-dev jest-reporter```
+```npm install --save-dev jest-text-reporter```
 
 or
 
-```yarn add -D jest-reporter```
+```yarn add -D jest-text-reporter```
 
 ## Getting Started
 
@@ -24,15 +24,9 @@ In your ```package.json``` add new reporter:
   "reporters": [
     "default",
     [
-      "<rootDir>/node_modules/jest-reporter", {
-        "passSound": "sounds/customPass.wav",
-        "failSound": "sounds/customFail.wav",
-        "passText": "txt/customPass.txt",
-        "failText": "txt/customFail.txt",
-        "skipFailSound": false,
-        "skipFailText": false,
-        "skipPassSound": false,
-        "skipPassText": false
+      "<rootDir>/node_modules/jest-text-reporter", {
+        "outputdir": "test-output",
+        "filename": "test-file"
       }
     ]
   ]
@@ -43,35 +37,11 @@ In your ```package.json``` add new reporter:
 
 | Option              | Value         | Description                                                          |
 | ------------------- |:-------------:| -------------------------------------------------------------------- |
-| ```passSound```     | ```string```  | Path to sound file e.g "sounds/pass.wav"                             |
-| ```failSound```     | ```string```  | Path to sound file e.g "sounds/fail.wav"                             |
-| ```passText```      | ```string```  | Path to text file e.g "txt/pass.txt"                                 |
-| ```failText```      | ```string```  | Path to text file e.g "txt/fail.txt"                                 |
-| ```skipFailSound``` | ```boolean``` | Set to ```true``` if you want to disable sound effect on failed test |
-| ```skipFailText```  | ```boolean``` | Set to ```true``` if you want to disable text message on failed test |
-| ```skipPassSound``` | ```boolean``` | Set to ```true``` if you want to disable sound effect on passed test |
-| ```skipPassText```  | ```boolean``` | Set to ```true``` if you want to disable text message on passed test |
-
-**If you not specify sound or text files, default ones will be used.**
+| ```outputdir```     | ```string```  | Path to output directory                                             |
+| ```filename```      | ```string```  | Output file name                                                     |
 
 ## Run
 
 ```npm run jest``` 
 or 
 ```yarn jest```
-
-## Demo
-You can even add **ASCII** images in txt files ;)
-
-##
-![](http://i.imgur.com/k2xi9sC.jpg) 
-##
-![](http://i.imgur.com/DfHS05v.jpg)
-
-## Windows users
-**You need "mplayer" installed on your system**
-
-**Tip:** Copy ```mplayer.exe``` into folder with ```package.json```
-
-## LICENSE
-[MIT](LICENSE)
