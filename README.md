@@ -1,4 +1,4 @@
-# Custom Jest Reporter (jest-reporter)
+#Jest Text Reporter (jest-text-reporter)
 Jest text output reporter
 
 ## Installing
