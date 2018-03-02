@@ -17,7 +17,7 @@
 		"url": "https://github.com/atsid/jest-text-reporter.git"
 	},
 	"homepage": "https://github.com/atsid/jest-text-reporter#readme",
-	"license": "MIT",
+	"license": "beerware",
 	"dependencies": {
 		"path": "^0.12.7"
 	},
@@ -30,8 +30,8 @@
 			[
 				"<rootDir>/index.js",
 				{
-					"outputdir": "foo",
-					"filename": "bar.txt"
+					"outputdir": ".",
+					"filename": "tests.txt"
 				}
 			]
 		]
